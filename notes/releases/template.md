@@ -14,26 +14,39 @@ Key links:
   - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestone/?
   - scala/collection-strawman milestone: https://github.com/scala/collection-strawman/milestone/?
 
-### Before the release
-- [ ] Notify community on https://contributors.scala-lang.org/c/announcements
+### N weeks before the release
+- [ ] Wind down PR queue. There has to be enough time after the last (non-trivial) PR is merged and the next phase. The core of the eco-system needs time to prepare for the final!
+- [ ] Triage scala/bug and scala/scala-dev tickets
 - [ ] Create next scala/scala milestone, move the magical "Merge to 2.13.x" description to it (so Scabot uses it as default for new PRs)
 - [ ] Close the scala/bug milestone, create next milestone, move pending issues
 - [ ] Close the scala/scala-dev milestone, create next milestone, move pending issues
-- [ ] Triage scala/bug and scala/scala-dev tickets
 - [ ] Check PRs assigned to the milestone, also check WIP
-- [ ] Check merged PRs for the next milestone in this branch, and assign them to this milestone
-- [ ] Merge in older release branch
-- [ ] Make sure the community build is green
+- [ ] Announce expected release date and current nightly "release candidate" (nightly sha-mangled version) at https://scala-ci.typesafe.com/artifactory/scala-integration/ on https://contributors.scala-lang.org/c/announcements
+    
+### Release announcement / notes
+- [ ] Notify community on https://contributors.scala-lang.org/c/announcements
+- [ ] Review merged PRs, make sure release-notes label is applied appropriately
+- [ ] PRs with release-notes label must have excellent title & description (title will be pasted literally in release note bullet list)
+- [ ] Draft release notes (to be published once GitHub tag is pushed)
+  - note that GitHub release notes drafts can only be viewed by committers, so use a gist to draft the notes, so the gist can be shared with the community
+- [ ] On contributors thread, link to release note gist and request feedback
+- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes)
+
+### N days before release
+- Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
+- [ ] Community build
     - won't be anywhere near all green, but we should make sure some nontrivial number of projects are still green
     - run with expected-greens only: https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-community-build/?
     - also do a full run to see if there are any unexpected greens
-- [ ] make sure the Windows Jenkins job is green
+- [ ] Windows Jenkins job
     - don't just trust the automated nightly runs, manually trigger a run on the exact SHA
     - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/?
+- [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
+- [ ] Merge in any older release branch
 
-### Stage the release
-- [ ] If there are any leftover staging repos from previous stagings, drop them first
-    - because the scala-dist job will resolve artifacts from https://oss.sonatype.org/content/repositories/staging/ rather than directly from the numbered staging repos
+### Point of no return
+- Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
+- [ ] Make sure there are no stray staging repos on sonatype
 - [ ] Trigger a build on [travis](https://travis-ci.org/scala/scala), specify `SCALA_VER_BASE` and `SCALA_VER_SUFFIX` in the custom config 
   - config: `before_install: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`)
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
@@ -48,20 +61,9 @@ Key links:
 - [ ] Sanity check jar/pom
   - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
   - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
-- [ ] Announce release is staged at https://oss.sonatype.org/content/repositories/staging/ on https://contributors.scala-lang.org/c/announcements
 - [ ] Trigger scala-dist jobs on travis (https://travis-ci.org/scala/scala-dist) with custom config. must use full-length SHAs!
   - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=stage` # TODO this mode is not yet implemented 
-
-### Release notes
-- [ ] Review merged PRs, make sure release-notes label is applied appropriately
-- [ ] PRs with release-notes label must have excellent title & description (title will be pasted literally in release note bullet list)
-- [ ] Draft release notes (to be published once GitHub tag is pushed)
-  - note that GitHub release notes drafts can only be viewed by committers, so use a gist to draft the notes, so the gist can be shared with the community
-- [ ] On contributors thread, link to release note gist and request feedback
-- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes)
-
-### Point of no return
-- tags are forever, so are maven artifacts and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
+- Remember, tags are forever, so are maven artifacts (even staged ones, as they could end up in local caches) and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
