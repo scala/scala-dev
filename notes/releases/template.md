@@ -38,6 +38,8 @@ Key links:
     - won't be anywhere near all green, but we should make sure some nontrivial number of projects are still green
     - run with expected-greens only: https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-community-build/?
     - also do a full run to see if there are any unexpected greens
+- [ ] Run scala-collections-laws and evaluate results
+    - Rex Kerr (@Ichoran) is the keeper and expert on this
 - [ ] Windows Jenkins job
     - don't just trust the automated nightly runs, manually trigger a run on the exact SHA
     - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/?
@@ -89,6 +91,7 @@ Key links:
 ### Modules
 - [ ] build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)
     - this work has moved to https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md
+- [ ] if it's a 2.12.x release, publish macro paradise for the new version
 
 ### Announcements
 - [ ] Scala Users discourse https://users.scala-lang.org
