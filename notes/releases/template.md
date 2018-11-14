@@ -30,7 +30,10 @@ Key links:
 - [ ] Draft release notes (to be published once GitHub tag is pushed)
   - note that GitHub release notes drafts can only be viewed by committers, so use a gist to draft the notes, so the gist can be shared with the community
 - [ ] On contributors thread, link to release note gist and request feedback
-- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes)
+- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
+  - `documentation/api.md`
+  - `download/index.md`
+  - `_config.yml` (update devscalaversion or scalaversion)
 
 ### N days before release
 - Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
@@ -45,6 +48,8 @@ Key links:
     - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/?
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
+- [ ] Check module versioning (is everything in versions.properties up to date?)
+- [ ] On major release, bump PickleFormat version
 
 ### Point of no return
 - Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
@@ -82,6 +87,8 @@ Key links:
 ### When everything is on maven central
 - [ ] make sure the draft release notes are on GitHub tag: https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
+- [ ] On 2.13.0 only: (manually) update the `current` symlink for the API docs
+  - https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15
 - [ ] Check that the API docs are published
   - http://www.scala-lang.org/api/$SCALA_VER/
   - https://docs.scala-lang.org/api/all.html ?
