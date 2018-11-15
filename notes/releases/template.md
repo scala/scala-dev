@@ -12,7 +12,6 @@ Key links:
   - scala/scala milestone: https://github.com/scala/scala/milestone/?
   - scala/bug milestone: https://github.com/scala/bug/milestone/?
   - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestone/?
-  - scala/collection-strawman milestone: https://github.com/scala/collection-strawman/milestone/?
 
 ### N weeks before the release
 - [ ] Wind down PR queue. There has to be enough time after the last (non-trivial) PR is merged and the next phase. The core of the eco-system needs time to prepare for the final!
