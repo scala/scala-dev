@@ -33,6 +33,8 @@ Key links:
   - `documentation/api.md`
   - `download/index.md`
   - `_config.yml` (update devscalaversion or scalaversion)
+- [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
+  - `api/all.md`
 
 ### N days before release
 - Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
