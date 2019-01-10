@@ -1,10 +1,15 @@
+---
+name: Release
+about: Tracking issue for a release
+title: Release 2.y.z
+---
 For every Scala release, make a copy of this file named after the release, and expand the variables.
 Ideally this should become a script you can run on your local machine. The only missing piece is programmatic triggering of travis jobs with custom config.
 
 Variables to be expanded in this template:
 - SCALA_VER_BASE="2.13.0"
 - SCALA_VER_SUFFIX="-M5"
-- SCALA_SHA=???????????????????????????????????????? 
+- SCALA_SHA=????????????????????????????????????????
 - DIST_SHA=????????????????????????????????????????
 - SCALA_VER="$SCALA_VER_BASE$SCALA_VER_SUFFIX"
 
@@ -21,7 +26,7 @@ Key links:
 - [ ] Close the scala/scala-dev milestone, create next milestone, move pending issues
 - [ ] Check PRs assigned to the milestone, also check WIP
 - [ ] Announce expected release date and current nightly "release candidate" (nightly sha-mangled version) at https://scala-ci.typesafe.com/artifactory/scala-integration/ on https://contributors.scala-lang.org/c/announcements
-    
+
 ### Release announcement / notes
 - [ ] Notify community on https://contributors.scala-lang.org/c/announcements
 - [ ] Review merged PRs, make sure release-notes label is applied appropriately
@@ -55,7 +60,7 @@ Key links:
 ### Point of no return
 - Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
 - [ ] Make sure there are no stray staging repos on sonatype
-- [ ] Trigger a build on [travis](https://travis-ci.org/scala/scala), specify `SCALA_VER_BASE` and `SCALA_VER_SUFFIX` in the custom config 
+- [ ] Trigger a build on [travis](https://travis-ci.org/scala/scala), specify `SCALA_VER_BASE` and `SCALA_VER_SUFFIX` in the custom config
   - config: `before_install: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`)
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
   - Check that the scala/scala job also triggered a following scala/scala-dist job: https://travis-ci.org/scala/scala-dist/builds/?
@@ -70,7 +75,7 @@ Key links:
   - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
   - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
 - [ ] Trigger scala-dist jobs on travis (https://travis-ci.org/scala/scala-dist) with custom config. must use full-length SHAs!
-  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=stage` # TODO this mode is not yet implemented 
+  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=stage` # TODO this mode is not yet implemented
 - Remember, tags are forever, so are maven artifacts (even staged ones, as they could end up in local caches) and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER
