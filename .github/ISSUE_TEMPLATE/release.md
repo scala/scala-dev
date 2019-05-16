@@ -6,7 +6,7 @@ title: Release 2.y.z
 For every Scala release, make a copy of this file named after the release, and expand the variables.
 Ideally this should become a script you can run on your local machine. The only missing piece is programmatic triggering of travis jobs with custom config.
 
-Variables to be expanded in this template:
+Variables to be expanded in this template (or export them in a local terminal, so that you can copy/paste the commands below without replacing anything):
 - SCALA_VER_BASE="2.13.0"
 - SCALA_VER_SUFFIX="-M5"
 - SCALA_SHA=????????????????????????????????????????
@@ -75,7 +75,7 @@ Key links:
   - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
   - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
 - [ ] Trigger scala-dist jobs on travis (https://travis-ci.org/scala/scala-dist) with custom config. must use full-length SHAs!
-  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=stage` # TODO this mode is not yet implemented
+  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`
 - Remember, tags are forever, so are maven artifacts (even staged ones, as they could end up in local caches) and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER
