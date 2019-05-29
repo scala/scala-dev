@@ -74,8 +74,6 @@ Key links:
 - [ ] Sanity check jar/pom
   - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
   - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
-- [ ] Trigger scala-dist jobs on travis (https://travis-ci.org/scala/scala-dist) with custom config. must use full-length SHAs!
-  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`
 - Remember, tags are forever, so are maven artifacts (even staged ones, as they could end up in local caches) and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER
