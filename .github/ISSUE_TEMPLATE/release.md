@@ -96,8 +96,8 @@ Key links:
 - [ ] Check that the API docs are published
   - http://www.scala-lang.org/api/$SCALA_VER/
   - https://docs.scala-lang.org/api/all.html ?
-- [ ] Merge the scala-lang PR
-  - [ ] wait for it to reach https://www.scala-lang.org and make sure it looks okay
+- [ ] Merge the scala-lang PR and the docs.scala-lang.org PR
+  - [ ] wait for them to arrive on the websites and make sure they look okay
 
 ### Modules
 - [ ] build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)
