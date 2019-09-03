@@ -61,7 +61,7 @@ Key links:
 - Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
 - [ ] Make sure there are no stray staging repos on sonatype
 - [ ] Trigger a build on [travis](https://travis-ci.org/scala/scala), specify `SCALA_VER_BASE` and `SCALA_VER_SUFFIX` in the custom config
-  - config: `before_install: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`)
+  - config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`)
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
   - Check that the scala/scala job also triggered a following scala/scala-dist job: https://travis-ci.org/scala/scala-dist/builds/?
   - [ ] Note the scala/scala commit (the full 40-char sha!)
@@ -80,8 +80,8 @@ Key links:
 - [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
 - [ ] Trigger two scala-dist jobs on travis (https://travis-ci.org/scala/scala-dist) with custom config. must use full-length SHAs!
-  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://travis-ci.org/scala/scala-dist/builds/?
-  - `before_install: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://travis-ci.org/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://travis-ci.org/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://travis-ci.org/scala/scala-dist/builds/?
 - [ ] Promote staging repos: `st_stagingRepoPromote [scala-repo]`, `st_stagingRepoPromote [modules-repo]` (or use oss.sonatype.org web UI)
 
 ### Check availability
