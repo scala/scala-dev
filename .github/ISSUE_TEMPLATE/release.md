@@ -34,12 +34,6 @@ Key links:
 - [ ] Draft release notes (to be published once GitHub tag is pushed)
   - note that GitHub release notes drafts can only be viewed by committers, so use a gist to draft the notes, so the gist can be shared with the community
 - [ ] On contributors thread, link to release note gist and request feedback
-- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
-  - `documentation/api.md`
-  - `download/index.md`
-  - `_config.yml` (update devscalaversion or scalaversion)
-- [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
-  - `api/all.md`
 
 ### N days before release
 - Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
@@ -90,6 +84,12 @@ Key links:
 - [ ] Check the release on maven search (takes longer): http://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
 
 ### When everything is on maven central
+- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
+  - `documentation/api.md`
+  - `download/index.md`
+  - `_config.yml` (update devscalaversion or scalaversion)
+- [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
+  - `api/all.md`
 - [ ] make sure the draft release notes are on GitHub tag: https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] On 2.13.0 only: (manually) update the `current` symlink for the API docs
