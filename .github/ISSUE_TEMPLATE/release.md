@@ -120,5 +120,5 @@ Key links:
 - If it's a major bump:
   - [ ] PR an update to `latestSpecVersion` in `spec/_config.yml` on the old branch, so that spec is marked as no longer current
   - [ ] Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org
-- [ ] Create PR to update https://github.com/lightbend/reactive-platform-docs/blob/master/src/main/paradox/supported-modules/index.md
+- [ ] Create PR to update https://github.com/lightbend/lightbend-platform-docs/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
 - [ ] Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
