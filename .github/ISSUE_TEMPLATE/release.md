@@ -26,6 +26,7 @@ Key links:
 - [ ] Close the scala/scala-dev milestone, create next milestone, move pending issues
 - [ ] Check PRs assigned to the milestone, also check WIP
 - [ ] Announce expected release date and current nightly "release candidate" (nightly sha-mangled version) at https://scala-ci.typesafe.com/artifactory/scala-integration/ on https://contributors.scala-lang.org/c/announcements
+- [ ] Also notify Scala Center advisory board members of the upcoming release, so they can help test if they want (Seth can handle this, if asked)
 
 ### Release announcement / notes
 - [ ] Notify community on https://contributors.scala-lang.org/c/announcements
