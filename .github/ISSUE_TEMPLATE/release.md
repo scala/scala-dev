@@ -37,7 +37,7 @@ Key links:
 - [ ] On contributors thread, link to release note gist and request feedback
 
 ### N days before release
-- Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
+- [ ] Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
 - [ ] Community build
   - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-community-build/????/
   - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
@@ -52,13 +52,12 @@ Key links:
 ### Point of no return
 - Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
 - [ ] Make sure there are no stray staging repos on sonatype
-- [ ] Trigger a build on [travis](https://travis-ci.org/scala/scala), specify `SCALA_VER_BASE` and `SCALA_VER_SUFFIX` in the custom config
-  - config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`)
+- [ ] Trigger a custom build on [travis](https://travis-ci.org/scala/scala)
+  - Select the correct branch
+  - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
   - Check that the scala/scala job also triggered a following scala/scala-dist job: https://travis-ci.org/scala/scala-dist/builds/?
-  - [ ] Note the scala/scala commit (the full 40-char sha!)
   - [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
-  - [ ] Note the scala/scala-dist commit (the full 40-char sha!)
   - [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
   - [ ] Note the repos to be promoted after tag is cut (see travis log)
     - https://oss.sonatype.org/content/repositories/orgscala-lang-????
