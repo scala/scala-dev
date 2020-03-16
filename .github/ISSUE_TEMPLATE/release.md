@@ -86,7 +86,7 @@ Key links:
   - `download/index.md`
   - `_config.yml` (update devscalaversion or scalaversion)
 - [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
-  - `api/all.md`
+  - `api/all.md`, `_config.yml`
 - [ ] make sure the draft release notes are on GitHub tag: https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] On 2.13.0 only: (manually) update the `current` symlink for the API docs
@@ -112,7 +112,6 @@ Key links:
 
 ### Afterwards
 - [ ] Create PR to add/update spec links on scala-lang.org (example: https://github.com/scala/scala-lang/pull/1050)
-- [ ] Create PR to update `scala-version` on docs.scala-lang.org (example: https://github.com/scala/docs.scala-lang/pull/1294)
 - [ ] Create a scala/scala PR to update `versions.properties` and the `baseVersion` in `build.sbt`.
   - If it's a major bump, also update MiMa base version, exclusion filters, and `spec/_config.yml`.
 - If it's a major bump:
