@@ -39,11 +39,8 @@ Key links:
 ### N days before release
 - Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
 - [ ] Community build
-    - won't be anywhere near all green, but we should make sure some nontrivial number of projects are still green
-    - run with expected-greens only: https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-community-build/?
-    - also do a full run to see if there are any unexpected greens
-- [ ] Run scala-collections-laws and evaluate results
-    - Rex Kerr (@Ichoran) is the keeper and expert on this
+  - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-community-build/????/
+  - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
 - [ ] Windows Jenkins job
     - don't just trust the automated nightly runs, manually trigger a run on the exact SHA
     - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/?
