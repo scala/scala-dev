@@ -18,8 +18,9 @@ before_cache:
   - rm -fv $HOME/.ivy2/.sbt.ivy.lock
   - rm -fv $HOME/.sdkman/var/broadcast
   - rm -fv $HOME/.sdkman/var/broadcast_id
-  - find $HOME/.ivy2/cache -name "ivydata-*.properties" -print -delete
-  - find $HOME/.sbt        -name "*.lock"               -print -delete
+  - find $HOME/.ivy2/cache -name "ivydata-*.properties"     -print -delete
+  - find $HOME/.sbt        -name "*.lock"                   -print -delete
+  - find $HOME/.sbt        -name "*compiler-bridge_*-bin-*" -print -delete
 
 cache:
   directories:
