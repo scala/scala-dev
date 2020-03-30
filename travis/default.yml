@@ -12,8 +12,7 @@ before_install:
     unset JAVA_HOME
     if [[ $ADOPTOPENJDK == 8 ]]; then versionPrefix="1\.8"; else versionPrefix=$ADOPTOPENJDK; fi
     java -version
-    java -version 2>&1 | grep 'AdoptOpenJDK.*[^0-9]'$versionPrefix'[^0-9]' || exit 1
-  - java -version
+  - java -version 2>&1 | grep 'AdoptOpenJDK.*[^0-9]'$versionPrefix'[^0-9]' || exit 1
 
 before_cache:
   - rm -fv $HOME/.ivy2/.sbt.ivy.lock
