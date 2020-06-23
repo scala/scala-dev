@@ -17,13 +17,14 @@ Key links:
   - scala/scala milestone: https://github.com/scala/scala/milestone/?
   - scala/bug milestone: https://github.com/scala/bug/milestone/?
   - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestone/?
+  - Discourse topic: https://contributors.scala-lang.org/t/?
 
 ### N weeks before the release
 - [ ] Wind down PR queue. There has to be enough time after the last (non-trivial) PR is merged and the next phase. The core of the eco-system needs time to prepare for the final!
 - [ ] Triage scala/bug and scala/scala-dev tickets
-- [ ] Create next scala/scala milestone, move the magical "Merge to 2.13.x" description to it (so Scabot uses it as default for new PRs)
-- [ ] Close the scala/bug milestone, create next milestone, move pending issues
-- [ ] Close the scala/scala-dev milestone, create next milestone, move pending issues
+- [ ] Create next scala/scala milestone, move the magical "Merge to 2.13.x" description to it (so Scabot uses it as default for new PRs), move pending PRs
+- [ ] Create next scala/bug milestone, move pending issues
+- [ ] Create next scala/scala-dev milestone, move pending issues
 - [ ] Check PRs assigned to the milestone, also check WIP
 - [ ] Announce expected release date and current nightly "release candidate" (nightly sha-mangled version) at https://scala-ci.typesafe.com/artifactory/scala-integration/ on https://contributors.scala-lang.org/c/announcements
 - [ ] Also notify Scala Center advisory board members of the upcoming release, so they can help test if they want (Seth can handle this, if asked)
@@ -48,6 +49,7 @@ Key links:
 - [ ] Merge in any older release branch
 - [ ] Check module versioning (is everything in versions.properties up to date?)
 - [ ] On major release, bump PickleFormat version
+- [ ] Close the scala/scala and scala/bug milestones
 
 ### Point of no return
 - Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
@@ -119,3 +121,4 @@ Key links:
   - [ ] Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org
 - [ ] Create PR to update https://github.com/lightbend/lightbend-platform-docs/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
 - [ ] Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
+- [ ] Close this ticket and close the scala-dev milestone
