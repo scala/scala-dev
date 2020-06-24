@@ -121,4 +121,5 @@ Key links:
   - [ ] Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org
 - [ ] Create PR to update https://github.com/lightbend/lightbend-platform-docs/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
 - [ ] Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
+- [ ] Consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
 - [ ] Close this ticket and close the scala-dev milestone
