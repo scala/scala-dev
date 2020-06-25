@@ -83,8 +83,8 @@ How long we wait depends on what kind of release it is. For a major release, it 
 
 ### Check availability
 - [ ] Check release on sonatype: https://oss.sonatype.org/content/repositories/releases/org/scala-lang/scala-compiler/$SCALA_VER/
-- [ ] Check the release on maven central: http://central.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
-- [ ] Check the release on maven search (takes longer): http://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
+- [ ] Check the release on maven central: https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
+- [ ] Check the release on maven search (takes longer): https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
 
 ### When everything is on maven central
 - [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
