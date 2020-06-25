@@ -43,7 +43,7 @@ Key links:
   - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-community-build/????/
   - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
 - [ ] Windows Jenkins job
-    - don't just trust the automated nightly runs, manually trigger a run on the exact SHA
+    - if there isn't already a nightly run on the exact right SHA (check the log), manually trigger one
     - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/?
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
