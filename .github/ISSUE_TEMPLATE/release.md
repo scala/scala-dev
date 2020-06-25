@@ -84,7 +84,6 @@ How long we wait depends on what kind of release it is. For a major release, it 
 ### Check availability
 - [ ] Check release on sonatype: https://oss.sonatype.org/content/repositories/releases/org/scala-lang/scala-compiler/$SCALA_VER/
 - [ ] Check the release on maven central: https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
-- [ ] Check the release on maven search (takes longer): https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
 
 ### When everything is on maven central
 - [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
@@ -117,13 +116,15 @@ How long we wait depends on what kind of release it is. For a major release, it 
 - [ ] ask Seth to announce on #scala IRC
 
 ### Afterwards
+- [ ] Check the release on maven search (may take a few hours):
+  - https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
 - [ ] Create PR to add/update spec links on scala-lang.org (example: https://github.com/scala/scala-lang/pull/1050)
 - [ ] Create a scala/scala PR to update `versions.properties` and the `baseVersion` in `build.sbt`.
   - If it's a major bump, also update MiMa base version, exclusion filters, and `spec/_config.yml`.
 - If it's a major bump:
   - [ ] Update `latestSpecVersion` in `spec/_config.yml` on the old branch, so that spec is marked as no longer current
   - [ ] Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org
-- [ ] Create PR to update https://github.com/lightbend/lightbend-platform-docs/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
+- [ ] Create PR to update https://github.com/lightbend/lightbend-technology-intro-doc/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
 - [ ] Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
 - [ ] Consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
 - [ ] Close this ticket and close the scala-dev milestone
