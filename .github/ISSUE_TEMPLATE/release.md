@@ -52,7 +52,11 @@ Key links:
 - [ ] Close the scala/scala and scala/bug milestones
 
 ### Point of no return
-- Once sufficient time has passed since last merged PR (1-2 weeks depending on whether it's a maintenance or development branch), and core projects have tried out the candidate nightly, it's time to cut the release!
+
+Once sufficient time has passed since last merged PR, it's time to cut the release!
+
+How long we wait depends on what kind of release it is. For a major release, it might be 1-2 weeks, to give core projects time to try out the preceding release candidate and/or the current candidate nightly. For point releases, assuming we've given the community ahead-of-time warning and kept them appraised of progress on the Discourse thread, and assuming the last changes merged seem sufficiently safe, we might build the next day.
+
 - [ ] Make sure there are no stray staging repos on sonatype
 - [ ] Trigger a custom build on [travis](https://travis-ci.org/scala/scala)
   - Select the correct branch
