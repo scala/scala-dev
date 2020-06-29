@@ -125,6 +125,8 @@ How long we wait depends on what kind of release it is. For a major release, it 
   - [ ] Update `latestSpecVersion` in `spec/_config.yml` on the old branch, so that spec is marked as no longer current
   - [ ] Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org
 - [ ] Create PR to update https://github.com/lightbend/lightbend-technology-intro-doc/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
-- [ ] Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
 - [ ] Consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
+- [ ] (Lightbend) Publish scala-fortify-plugin
+- [ ] (Lightbend) Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
+- [ ] (Lightbend) Notify eng-updates
 - [ ] Close this ticket and close the scala-dev milestone
