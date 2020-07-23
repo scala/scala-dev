@@ -6,7 +6,7 @@ before_install:
     echo sdkman_auto_answer=true > $HOME/.sdkman/etc/config
     echo sdkman_auto_selfupdate=true >> $HOME/.sdkman/etc/config
     source $HOME/.sdkman/bin/sdkman-init.sh
-    sdkJava=$(sdk list java | grep -o "$ADOPTOPENJDK\.[0-9\.]*hs-adpt" | head -1)
+    sdkJava=$(sdk list java | grep -o " $ADOPTOPENJDK\.[0-9\.]*hs-adpt" | head -1 | cut -c2-)
     sdk install java $sdkJava || true # install fails if it's already installed
     sdk use java $sdkJava
     unset JAVA_HOME
