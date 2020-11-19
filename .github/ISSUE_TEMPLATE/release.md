@@ -102,8 +102,19 @@ How long we wait depends on what kind of release it is. For a major release, it 
 - [ ] Check that the API docs are published
   - http://www.scala-lang.org/api/$SCALA_VER/
   - https://docs.scala-lang.org/api/all.html ?
+  - if they don't show up, possible troubleshooting steps include:
+    - review the two scala-dist job logs to make sure that
+      - the first one appears to have succeeded putting files in `/home/linuxsoft/archives/scala/api` on `chara.epfl.ch`
+      - the second one appears to have succeeded in updating the symlink (from `2.1x.y` to $SCALA_VER)
+    - ssh to chara.epfl.ch and poke around to see if things are where they should be
+      - if you don't have the credential for this locally but you are able to bring jenkins-worker-publish up at `ssh jenkins-worker-publish`, then from there you can `ssh -i ~/.ssh/jenkins_lightbend_chara scalatest@chara.epfl.ch`
+    - see if https://scala-webapps.epfl.ch/jenkins/view/All/job/production_scala-lang.org-scala-dist-archive-sync/ has run a job yet to sync the changes into production
+      - if not, you can manually trigger a job. Seth has access to do that, probably others on the team do too. if we get stuck, Fabien can help
 - [ ] Merge the scala-lang PR and the docs.scala-lang.org PR
   - [ ] wait for them to arrive on the websites and make sure they look okay
+    - if the scala-lang changes don't show up, possible troubleshooting steps include:
+      - see if https://scala-webapps.epfl.ch/jenkins/view/All/job/production_scala-lang.org-builder/ has run a job yet to actually publish the changes
+      - see note above about permissions to trigger a job
 
 ### Modules
 - [ ] build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)
