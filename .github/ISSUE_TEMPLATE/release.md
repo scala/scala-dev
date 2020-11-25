@@ -7,17 +7,21 @@ For every Scala release, make a copy of this file named after the release, and e
 Ideally this should become a script you can run on your local machine. The only missing piece is programmatic triggering of travis jobs with custom config.
 
 Variables to be expanded in this template (or export them in a local terminal, so that you can copy/paste the commands below without replacing anything):
-- SCALA_VER_BASE="2.13.0"
-- SCALA_VER_SUFFIX="-M5"
-- SCALA_SHA=????????????????????????????????????????
-- DIST_SHA=????????????????????????????????????????
-- SCALA_VER="$SCALA_VER_BASE$SCALA_VER_SUFFIX"
+
+```bash
+SCALA_VER_BASE="2.13.0"
+SCALA_VER_SUFFIX="-M5"
+SCALA_SHA=????????????????????????????????????????
+DIST_SHA=????????????????????????????????????????
+SCALA_VER="$SCALA_VER_BASE$SCALA_VER_SUFFIX"
+```
 
 Key links:
-  - scala/scala milestone: https://github.com/scala/scala/milestone/?
-  - scala/bug milestone: https://github.com/scala/bug/milestone/?
-  - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestone/?
+  - scala/scala milestone: https://github.com/scala/scala/milestones/2.13.?
+  - scala/bug milestone: https://github.com/scala/bug/milestones/2.13.?
+  - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestone/2.13.?
   - Discourse topic: https://contributors.scala-lang.org/t/?
+  - release notes draft: https://github.com/scala/scala-dev/blob/scala-dev/releases/2.13.?.md
 
 ### N weeks before the release
 - [ ] Wind down PR queue. There has to be enough time after the last (non-trivial) PR is merged and the next phase. The core of the eco-system needs time to prepare for the final!
@@ -33,21 +37,20 @@ Key links:
 - [ ] Notify community on https://contributors.scala-lang.org/c/announcements
 - [ ] Review merged PRs, make sure release-notes label is applied appropriately
 - [ ] PRs with release-notes label must have excellent title & description (title will be pasted literally in release note bullet list)
-- [ ] Draft release notes (to be published once GitHub tag is pushed)
-  - note that GitHub release notes drafts can only be viewed by committers, so use a gist to draft the notes, so the gist can be shared with the community
-- [ ] On contributors thread, link to release note gist and request feedback
+- [ ] Draft release notes (PR and self-merge, so others can comment there rather than on the commits)
+- [ ] On contributors thread, link to release note file and request feedback
 
 ### N days before release
 - [ ] Announce no more PRs will be merged unless last-minute regressions are found. Re-iterate current nightly sha version for testing.
 - [ ] Community build
-  - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk8-integrate-community-build/????/
+  - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk8-integrate-community-build/????
   - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
   - JDK 15: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk15-integrate-community-build/????
 - [ ] Windows Jenkins job
     - if there isn't already a nightly run on the exact right SHA (check the log), manually trigger one
-    - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/?
-- [ ] Run test suite (`testAll`) on JDK 11 and 15
-  - (Our CI ought to do this, but until we get that set up, it can be done locally.)
+    - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/????
+- [ ] Run test suite (`testAll`) on JDK 11 (ought to be in CI, but locally for now.)
+- [ ] Run test suite (`testAll`) on JDK 15 (ought to be in CI, but locally for now.)
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
 - [ ] Check module versioning (is everything in versions.properties up to date?)
@@ -60,7 +63,7 @@ Once sufficient time has passed since last merged PR, it's time to cut the relea
 
 How long we wait depends on what kind of release it is. For a major release, it might be 1-2 weeks, to give core projects time to try out the preceding release candidate and/or the current candidate nightly. For point releases, assuming we've given the community ahead-of-time warning and kept them appraised of progress on the Discourse thread, and assuming the last changes merged seem sufficiently safe, we might build the next day.
 
-- [ ] Make sure there are no stray staging repos on sonatype
+- [ ] Make sure there are no stray [staging repos](https://oss.sonatype.org/#stagingRepositories) on sonatype
 - [ ] Trigger a custom build on [travis](https://travis-ci.org/scala/scala)
   - Select the correct branch
   - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
