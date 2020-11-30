@@ -96,6 +96,7 @@ How long we wait depends on what kind of release it is. For a major release, it 
   - `documentation/api.md`
   - `download/index.md`
   - `_config.yml` (update devscalaversion or scalaversion)
+  - `index.md` (update `currentScalaVersion`)
 - [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
   - `api/all.md`, `_config.yml`
 - [ ] make sure the draft release notes are on GitHub tag: https://github.com/scala/scala/releases/tag/v$SCALA_VER
