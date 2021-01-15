@@ -137,8 +137,12 @@ How long we wait depends on what kind of release it is. For a major release, it 
 - [ ] Check the release on maven search (may take a few hours):
   - https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
 - [ ] Create PR to add/update spec links on scala-lang.org (example: https://github.com/scala/scala-lang/pull/1050)
-- [ ] Create a scala/scala PR to update `versions.properties` and the `baseVersion` in `build.sbt`.
-  - If it's a major bump, also update MiMa base version, exclusion filters, and `spec/_config.yml`.
+- [ ] Create a scala/scala PR to:
+  - [ ] update `starr.version` in `/versions.properties`
+  - [ ] update `Global / baseVersion` in `/build.sbt`
+  - [ ] update `mimaReferenceVersion` in `/project/MimaFilters.scala`
+  - [ ] clear out `mimaFilters` in `/project/MimaFilters.scala`, except the one(s) labeled "KEEP"
+  - [ ] `spec/_config.yml`, if it's a major bump
 - If it's a major bump:
   - [ ] Update `latestSpecVersion` in `spec/_config.yml` on the old branch, so that spec is marked as no longer current
   - [ ] Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org
