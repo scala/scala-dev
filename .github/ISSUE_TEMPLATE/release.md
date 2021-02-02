@@ -54,8 +54,12 @@ Key links:
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
 - [ ] Check module versioning (is everything in versions.properties up to date?)
+  - including make sure the version of [scala-asm][] we're using is using latest [ASM][]
 - [ ] On major release, bump PickleFormat version
 - [ ] Close the scala/scala and scala/bug milestones
+
+[scala-asm]: https://github.com/scala/scala-asm/
+[ASM]: https://asm.ow2.io/versions.html
 
 ### Point of no return
 
