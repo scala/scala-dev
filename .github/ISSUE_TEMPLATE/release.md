@@ -67,6 +67,8 @@ Once sufficient time has passed since last merged PR, it's time to cut the relea
 
 How long we wait depends on what kind of release it is. For a major release, it might be 1-2 weeks, to give core projects time to try out the preceding release candidate and/or the current candidate nightly. For point releases, assuming we've given the community ahead-of-time warning and kept them appraised of progress on the Discourse thread, and assuming the last changes merged seem sufficiently safe, we might build the next day.
 
+Be mindful of others' schedules; even minor releases make work downstream (for Scala.js and Scala Native, for the Scala 3 team, for compiler plugin authors, and so on). It's better not to release on Friday or before a holiday.
+
 - [ ] Make sure there are no stray [staging repos](https://oss.sonatype.org/#stagingRepositories) on sonatype
 - [ ] Trigger a custom build on [travis](https://travis-ci.org/scala/scala)
   - Select the correct branch
