@@ -70,11 +70,11 @@ How long we wait depends on what kind of release it is. For a major release, it 
 Be mindful of others' schedules; even minor releases make work downstream (for Scala.js and Scala Native, for the Scala 3 team, for compiler plugin authors, and so on). It's better not to release on Friday or before a holiday.
 
 - [ ] Make sure there are no stray [staging repos](https://oss.sonatype.org/#stagingRepositories) on sonatype
-- [ ] Trigger a custom build on [travis](https://travis-ci.org/scala/scala)
+- [ ] Trigger a custom build on [travis](https://travis-ci.com/scala/scala)
   - Select the correct branch
   - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
-  - Check that the scala/scala job also triggered a following scala/scala-dist job: https://travis-ci.org/scala/scala-dist/builds/?
+  - Check that the scala/scala job also triggered a following scala/scala-dist job: https://travis-ci.com/scala/scala-dist/builds/?
   - [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
   - [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
   - [ ] Note the repos to be promoted after tag is cut (see travis log)
@@ -88,9 +88,9 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
-- [ ] Trigger two scala-dist jobs on travis (https://travis-ci.org/scala/scala-dist) with custom config. must use full-length SHAs!
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://travis-ci.org/scala/scala-dist/builds/?
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://travis-ci.org/scala/scala-dist/builds/?
+- [ ] Trigger two scala-dist jobs on travis (https://travis-ci.com/scala/scala-dist) with custom config. must use full-length SHAs!
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://travis-ci.com/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://travis-ci.com/scala/scala-dist/builds/?
 - [ ] Promote staging repos: `st_stagingRepoPromote [scala-repo]`, `st_stagingRepoPromote [modules-repo]` (or use oss.sonatype.org web UI)
 
 ### Check availability
