@@ -96,12 +96,11 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 
 ### When everything is on maven central
 - [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
-  - `documentation/api.md`
   - `download/index.md`
   - `_config.yml` (update devscalaversion or scalaversion)
   - `index.md` (update `currentScalaVersion`)
 - [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
-  - `api/all.md`, `_config.yml`
+  - `api/all.md`, `_config.yml`, `_overviews/jdk-compatibility/overview.md`
 - [ ] make sure the draft release notes are on GitHub tag: https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] On 2.13.0 only: (manually) update the `current` symlink for the API docs
