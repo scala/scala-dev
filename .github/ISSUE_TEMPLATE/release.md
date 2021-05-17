@@ -45,12 +45,9 @@ Key links:
 - [ ] Community build
   - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk8-integrate-community-build/????
   - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
-  - JDK 15: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk15-integrate-community-build/????
-- [ ] Windows Jenkins job
-    - if there isn't already a nightly run on the exact right SHA (check the log), manually trigger one
-    - https://scala-ci.typesafe.com/job/scala-2.13.x-integrate-windows/????
-- [ ] Run test suite (`testAll`) on JDK 11 (ought to be in CI, but locally for now.)
-- [ ] Run test suite (`testAll`) on JDK 15 (ought to be in CI, but locally for now.)
+  - JDK 16: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk16-integrate-community-build/????
+- [ ] Windows build on GitHub Actions: https://github.com/scala/scala/runs/????????
+- [ ] JDK 16 build on [Travis (cron job)](https://travis-ci.com/github/scala/scala/builds): https://travis-ci.com/github/scala/scala/builds/????????
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
 - [ ] Check module versioning (is everything in versions.properties up to date?)
