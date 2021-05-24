@@ -19,7 +19,7 @@ SCALA_VER="$SCALA_VER_BASE$SCALA_VER_SUFFIX"
 Key links:
   - scala/scala milestone: https://github.com/scala/scala/milestones/2.13.?
   - scala/bug milestone: https://github.com/scala/bug/milestones/2.13.?
-  - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestone/2.13.?
+  - scala/scala-dev milestone: https://github.com/scala/scala-dev/milestones/2.13.?
   - Discourse topic: https://contributors.scala-lang.org/t/?
   - release notes draft: https://github.com/scala/scala-dev/blob/scala-dev/releases/2.13.?.md
 
