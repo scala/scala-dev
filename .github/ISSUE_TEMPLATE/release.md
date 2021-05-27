@@ -38,6 +38,7 @@ Key links:
 - [ ] Review merged PRs, make sure release-notes label is applied appropriately
 - [ ] PRs with release-notes label must have excellent title & description (title will be pasted literally in release note bullet list)
 - [ ] Draft release notes (PR and self-merge, so others can comment there rather than on the commits)
+    - Starting point: `gh api --paginate -X GET search/issues -f q='repo:scala/scala is:pull-request is:merged milestone:2.12.14 label:release-notes' -q '.items[] | "  * \(.title) ([#\(.number)](\(.html_url)) by [@\(.user.login)](\(.user.html_url)))"'`
 - [ ] On contributors thread, link to release note file and request feedback
 
 ### N days before release
