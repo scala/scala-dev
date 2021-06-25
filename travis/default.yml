@@ -7,12 +7,15 @@ before_install:
     echo sdkman_auto_selfupdate=true >> $HOME/.sdkman/etc/config
     source $HOME/.sdkman/bin/sdkman-init.sh
     sdkJava=$(sdk list java | grep -o " $ADOPTOPENJDK\.[0-9\.]*hs-adpt" | head -1 | cut -c2-)
+    # if we didn't find AdoptOpenJDK, accept a non-Adopt early access build
+    if [[ -z $sdkJava ]]; then sdkJava=$(sdk list java | egrep -o " $ADOPTOPENJDK\\.ea.[0-9]+-open" | head -1 | cut -c2-); fi
+    if [[ -z $sdkJava ]]; then echo "no matching JDK found: $ADOPTOPENJDK"; travis_terminate 1; fi
     sdk install java $sdkJava || true # install fails if it's already installed
     sdk use java $sdkJava
     unset JAVA_HOME
     if [[ $ADOPTOPENJDK == 8 ]]; then versionPrefix="1\.8"; else versionPrefix=$ADOPTOPENJDK; fi
     java -version
-  - java -version 2>&1 | grep 'AdoptOpenJDK.*[^0-9]'$versionPrefix'[^0-9]' || exit 1
+  - java -version 2>&1 | grep 'OpenJDK.*[^0-9]'$versionPrefix'[^0-9]' || exit 1
   # Travis-CI has (as of March 2021, anyway) an outdated sbt-extras version,
   # so overwrite it with a March 2021 version that works with sbt 1.4.8+
   - |
