@@ -16,12 +16,11 @@ before_install:
     if [[ $ADOPTOPENJDK == 8 ]]; then versionPrefix="1\.8"; else versionPrefix=$ADOPTOPENJDK; fi
     java -version
   - java -version 2>&1 | grep 'OpenJDK.*[^0-9]'$versionPrefix'[^0-9]' || exit 1
-  # Travis-CI has (as of March 2021, anyway) an outdated sbt-extras version,
-  # so overwrite it with a March 2021 version that works with sbt 1.4.8+
+  # Travis-CI's default is an outdated version of sbt-extras;
+  # overwrite it with the official sbt launcher
   - |
-    curl -sL https://raw.githubusercontent.com/paulp/sbt-extras/dc4f350f112580fcdf5f6fa7e8d5d2116475f84a/sbt  > /tmp/sbt-launch-script || travis_terminate 1
-    chmod +x /tmp/sbt-launch-script || travis_terminate 1
-    sudo mv /tmp/sbt-launch-script /usr/local/bin/sbt || travis_terminate 1
+    curl -L --silent "https://raw.githubusercontent.com/sbt/sbt/1.5.x/sbt" > $HOME/sbt
+    chmod +x $HOME/sbt && sudo mv $HOME/sbt /usr/local/bin/sbt
 
 before_cache:
   - rm -fv $HOME/.ivy2/.sbt.ivy.lock
