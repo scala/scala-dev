@@ -19,6 +19,8 @@ before_install:
   # Travis-CI's default is an outdated version of sbt-extras;
   # overwrite it with the official sbt launcher
   - |
+    unset SBT_OPTS
+    unset JVM_OPTS
     curl -L --silent "https://raw.githubusercontent.com/sbt/sbt/1.5.x/sbt" > $HOME/sbt
     chmod +x $HOME/sbt && sudo mv $HOME/sbt /usr/local/bin/sbt
 
