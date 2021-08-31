@@ -134,6 +134,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] Tweet from [@scala_lang](https://twitter.com/scala_lang)
 - [ ] https://gitter.im/scala/scala
     - [ ] if you feel like it, say something in https://gitter.im/scala/contributors too
+    - [ ] Discord in addition, or instead?
 - [ ] ask Seth to announce on #scala IRC
 
 ### Afterwards
@@ -152,6 +153,6 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] Create PR to update https://github.com/lightbend/lightbend-technology-intro-doc/blob/master/docs/modules/getting-help/pages/build-dependencies.adoc
 - [ ] Consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
 - [ ] (Lightbend) Publish scala-fortify-plugin
-- [ ] (Lightbend) Update [WhiteSource](https://github.com/lightbend/scala-team/wiki/Whitesource)
+- [ ] (Lightbend) Update whatever we replaced WhiteSource with?
 - [ ] (Lightbend) Notify eng-updates
 - [ ] Close this ticket and close the scala-dev milestone
