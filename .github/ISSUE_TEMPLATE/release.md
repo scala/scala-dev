@@ -46,9 +46,9 @@ Key links:
 - [ ] Community build
   - JDK 8: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk8-integrate-community-build/????
   - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
-  - JDK 16: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk16-integrate-community-build/????
+  - JDK 17: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk16-integrate-community-build/????
 - [ ] Windows build on GitHub Actions: https://github.com/scala/scala/runs/????????
-- [ ] JDK 16 build on [Travis (cron job)](https://travis-ci.com/github/scala/scala/builds): https://travis-ci.com/github/scala/scala/builds/????????
+- [ ] JDK 17 build on [Travis (cron job)](https://travis-ci.com/github/scala/scala/builds): https://travis-ci.com/github/scala/scala/builds/????????
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
 - [ ] Check module versioning (is everything in versions.properties up to date?)
