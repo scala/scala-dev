@@ -9,7 +9,7 @@ before_install:
     sdkJava=$(sdk list java | grep -o " $ADOPTOPENJDK\.[0-9\.]*hs-adpt" | head -1 | cut -c2-)
     # if we didn't find AdoptOpenJDK, accept a non-Adopt early access build
     if [[ -z $sdkJava ]]; then sdkJava=$(sdk list java | egrep -o " $ADOPTOPENJDK\\.ea.[0-9]+-open" | head -1 | cut -c2-); fi
-    if [[ -z $sdkJava ]]; then echo "no matching JDK found: $ADOPTOPENJDK"; travis_terminate 1; fi
+    if [[ -z $sdkJava ]]; then sdk list java; echo "no matching JDK found: $ADOPTOPENJDK"; travis_terminate 1; fi
     sdk install java $sdkJava || true # install fails if it's already installed
     sdk use java $sdkJava
     unset JAVA_HOME
