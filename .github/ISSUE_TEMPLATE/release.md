@@ -107,7 +107,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] On 2.13.0 only: (manually) update the `current` symlink for the API docs
   - https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15
 - [ ] Check that the API docs are published
-  - http://www.scala-lang.org/api/$SCALA_VER/
+  - https://www.scala-lang.org/api/$SCALA_VER/
   - https://docs.scala-lang.org/api/all.html ?
   - if they don't show up, possible troubleshooting steps include:
     - review the two scala-dist job logs to make sure that
@@ -139,7 +139,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 
 ### Afterwards
 - [ ] Check the release on maven search (may take a few hours):
-  - https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20v%3A$SCALA_VER
+  - https://search.maven.org/search?q=g:org.scala-lang%20AND%20v:$SCALA_VER
 - [ ] Create PR to add/update spec links on scala-lang.org (example: https://github.com/scala/scala-lang/pull/1050)
 - [ ] Create a scala/scala PR to:
   - [ ] update `starr.version` in `/versions.properties`
