@@ -155,4 +155,5 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] (Lightbend) Publish scala-fortify-plugin
 - [ ] (Lightbend) Update whatever we replaced WhiteSource with?
 - [ ] (Lightbend) Notify eng-updates
+- [ ] Scastie: open PR adding new version (modeled on https://github.com/scalacenter/scastie/pull/538)
 - [ ] Close this ticket and close the scala-dev milestone
