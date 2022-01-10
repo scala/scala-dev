@@ -110,8 +110,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] ~On major releases only: (manually) update the `current` symlink for the API docs~
   - ~https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15~
 - [ ] Check that the API docs are published
-  - https://www.scala-lang.org/api/$SCALA_VER/
-  - https://docs.scala-lang.org/api/all.html ?
+  - https://www.scala-lang.org/api/ should have new version
   - if they don't show up, possible troubleshooting steps include:
     - review the two scala-dist job logs to make sure that
       - the first one appears to have succeeded putting files in `/home/linuxsoft/archives/scala/api` on `chara.epfl.ch`
@@ -123,9 +122,9 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 
 ### Prepare downstream
 
-- [ ] Create PR to add/update spec links on scala-lang.org (example: https://github.com/scala/scala-lang/pull/1050)
-- [ ] build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)
-    - this work has moved to https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md
+- [ ] ~Create PR to add/update spec links on scala-lang.org (example: https://github.com/scala/scala-lang/pull/1050)~
+- [ ] ~build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)~
+    - ~this work has moved to https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md~
 - [ ] if it's a 2.12.x release, publish macro paradise for the new version
 - [ ] Open a [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues) ticket requesting publishing
 - [ ] (Lightbend) Open a [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues) ticket requesting publishing (the Akka team usually does it)
