@@ -139,6 +139,7 @@ Before proceeding any further, wait for the ecosystem to catch up.
 
 - Downstream publishing:
   - [ ] Wait for Scala.js to support the new release
+  - [ ] Wait for Scala Native to support the new release
   - [ ] Wait for scalameta and scalameta-based tooling such as Metals to publish
   - [ ] Wait for kind-projector to publish
   - [ ] Wait for scoverage to publish
