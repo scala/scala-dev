@@ -106,6 +106,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
   - `index.md` (update `currentScalaVersion`)
 - [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
   - `api/all.md`, `_config.yml`, `_overviews/jdk-compatibility/overview.md`
+  - also consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] ~On major releases only: (manually) update the `current` symlink for the API docs~
   - ~https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15~
@@ -126,9 +127,11 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] ~build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)~
     - ~this work has moved to https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md~
 - [ ] if it's a 2.12.x release, publish macro paradise for the new version
-- [ ] Open a [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues) ticket requesting publishing
-- [ ] (Lightbend) Open a [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues) ticket requesting publishing (the Akka team usually does it)
-- [ ] Consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
+- Downstream nags:
+  - [ ] Open a [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues) ticket requesting publishing
+  - [ ] Open a [scalameta](https://github.com/scalameta/scalameta/issues) ticket requesting publishing
+  - [ ] Open a [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues) ticket requesting publishing
+  - [ ] (Lightbend) Open a [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues) ticket requesting publishing (the Akka team usually does it)
 
 ### Wait for downstream
 
@@ -145,9 +148,7 @@ Before proceeding any further, wait for the ecosystem to catch up.
 
 We have promised to wait **48 non-weekend hours**, minimum.
 
-If there are delays downstream, at some point it may make sense to go
-ahead and announce anyway, since news of the release will already be
-spreading in the community.
+If there are delays downstream, at some point it may make sense to go ahead and announce anyway, since news of the release will already be spreading in the community.
 
 ### Announcements
 
