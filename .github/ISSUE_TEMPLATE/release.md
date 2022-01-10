@@ -87,7 +87,6 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] Check that JARs haven't mysteriously bloated — compare sizes to previous release. We have no other backstop for this.
 - Remember, tags are forever, so are maven artifacts (even staged ones, as they could end up in local caches) and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
-- [ ] Add release notes to https://github.com/scala/scala/releases/tag/v$SCALA_VER but leave the release as draft for now
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
 - [ ] Trigger two scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. must use full-length SHAs!
   - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
@@ -153,7 +152,7 @@ spreading in the community.
 
 ### Announcements
 
-- [ ] on GitHub, change the release from "draft" to "release":
+- [ ] On GitHub, use "Create release from tag" button and add release notes
   - https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Merge the scala-lang PR and the docs.scala-lang.org PR
   - [ ] wait for them to arrive on the websites and make sure they look okay
