@@ -130,6 +130,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - Downstream nags:
   - [ ] Open a [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues) ticket requesting publishing
   - [ ] Open a [scalameta](https://github.com/scalameta/scalameta/issues) ticket requesting publishing
+  - [ ] Open a [scalafix](https://github.com/scalameta/scalameta/issues) ticket requesting publishing
   - [ ] Open a [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues) ticket requesting publishing
   - [ ] Open a [silencer](https://github.com/ghik/silencer/issues) ticket requesting publishing
   - [ ] (Lightbend) Open a [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues) ticket requesting publishing (the Akka team usually does it)
@@ -141,7 +142,9 @@ Before proceeding any further, wait for the ecosystem to catch up.
 - Downstream publishing:
   - [ ] Wait for Scala.js to support the new release
   - [ ] Wait for Scala Native to support the new release
-  - [ ] Wait for scalameta and scalameta-based tooling such as Metals to publish
+  - [ ] Wait for scalameta to publish
+  - [ ] Wait for scalafix to publish
+  - [ ] Wait for Metals to publish
   - [ ] Wait for kind-projector to publish
   - [ ] Wait for scoverage to publish
 - Downstream signoffs:
