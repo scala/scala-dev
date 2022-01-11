@@ -133,6 +133,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
   - [ ] Open a [scalafix](https://github.com/scalameta/scalameta/issues) ticket requesting publishing
   - [ ] Open a [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues) ticket requesting publishing
   - [ ] Open a [silencer](https://github.com/ghik/silencer/issues) ticket requesting publishing
+  - [ ] Open a [wartremover](https://github.com/wartremover/wartremover/issues) ticket requesting publishing
   - [ ] (Lightbend) Open a [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues) ticket requesting publishing (the Akka team usually does it)
 
 ### Wait for downstream
