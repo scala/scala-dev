@@ -127,14 +127,15 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - [ ] ~build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)~
     - ~this work has moved to https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md~
 - [ ] if it's a 2.12.x release, publish macro paradise for the new version
-- Downstream nags:
-  - [ ] Open a [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues) ticket requesting publishing
-  - [ ] Open a [scalameta](https://github.com/scalameta/scalameta/issues) ticket requesting publishing
-  - [ ] Open a [scalafix](https://github.com/scalameta/scalameta/issues) ticket requesting publishing
-  - [ ] Open a [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues) ticket requesting publishing
-  - [ ] Open a [silencer](https://github.com/ghik/silencer/issues) ticket requesting publishing
-  - [ ] Open a [wartremover](https://github.com/wartremover/wartremover/issues) ticket requesting publishing
-  - [ ] (Lightbend) Open a [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues) ticket requesting publishing (the Akka team usually does it)
+- Open tickets in these repos, requesting publishing:
+  - [ ] [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues)
+  - [ ] [scalameta](https://github.com/scalameta/scalameta/issues)
+  - [ ] [scalafix](https://github.com/scalameta/scalameta/issues)
+  - [ ] [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues)
+  - [ ] [silencer](https://github.com/ghik/silencer/issues)
+  - [ ] [wartremover](https://github.com/wartremover/wartremover/issues)
+  - [ ] [Ammonite](https://github.com/com-lihaoyi/Ammonite/issues)
+  - [ ] (Lightbend) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
 
 ### Wait for downstream
 
