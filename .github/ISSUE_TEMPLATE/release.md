@@ -130,7 +130,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 - Open tickets in these repos, requesting publishing:
   - [ ] [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues)
   - [ ] [scalameta](https://github.com/scalameta/scalameta/issues)
-  - [ ] [scalafix](https://github.com/scalameta/scalameta/issues)
+  - [ ] [scalafix](https://github.com/scalacenter/scalafix/issues)
   - [ ] [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues)
   - [ ] [silencer](https://github.com/ghik/silencer/issues)
   - [ ] [wartremover](https://github.com/wartremover/wartremover/issues)
