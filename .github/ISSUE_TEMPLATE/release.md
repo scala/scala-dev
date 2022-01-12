@@ -134,6 +134,7 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
   - [ ] [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues)
   - [ ] [silencer](https://github.com/ghik/silencer/issues)
   - [ ] [wartremover](https://github.com/wartremover/wartremover/issues)
+  - [ ] [acyclic](https://github.com/com-lihaoyi/acyclic/issues)
   - [ ] [Ammonite](https://github.com/com-lihaoyi/Ammonite/issues)
   - [ ] (Lightbend) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
 
