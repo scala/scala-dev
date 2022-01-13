@@ -174,6 +174,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
 - [ ] Ensure SDKMAN makes the release available (see scala/scala-dev#782)
 - [ ] ask Seth to announce on #scala IRC
+- [ ] Announce on https://reddit.com/r/scala
 
 ### Afterwards
 
