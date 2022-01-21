@@ -178,7 +178,10 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 
 ### Afterwards
 
-- [ ] Scala 3: open PR updating version in `project/Build.scala`
+- [ ] Scala 3: open PR updating version:
+  - two places to update:
+    - `project/Build.scala`
+    - `community-build/community-projects/stdLib213` (after updating https://github.com/dotty-staging/scala to include recent commits)
   - https://github.com/lampepfl/dotty/pulls
 - [ ] Scastie: open PR adding new version (modeled on https://github.com/scalacenter/scastie/pull/538)
   - note that the PR won't be mergeable until kind-projector has published; and if kind-projector's version number has changed, `ScalaTarget.scala` will need updating
