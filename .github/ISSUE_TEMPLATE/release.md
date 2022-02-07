@@ -172,9 +172,15 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 - [ ] Discord: link to release notes in #announcements channel
     - [ ] consider also saying something in #scala-contributors channel
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
-- [ ] Ensure SDKMAN makes the release available (see scala/scala-dev#782)
-- [ ] ask Seth to announce on #scala IRC
+- [ ] Add the release to SDKMAN
+  - as per the documentation at https://sdkman.io/vendors
+  - URL provided must be in `.zip` format, `.tgz` doesn't work
+  - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.12.14", "url": "https://downloads.lightbend.com/scala/2.12.14/scala-2.12.14.tgz"}' https://vendors.sdkman.io/release`
+  - replace both `xxx`s with the credential information provided to Seth by Marco Vermeulen (marco at sdkman dot io)
+  - [ ] test afterwards with `sdk list scala` and `sdk install scala <version>` (these should work immediately once the `POST` succeeds)
+  - to correct mistakes, `PATCH` and `DELETE` are also available
 - [ ] Announce on https://reddit.com/r/scala
+- [ ] ask Seth to announce on #scala IRC
 
 ### Afterwards
 
