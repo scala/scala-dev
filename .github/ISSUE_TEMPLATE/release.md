@@ -179,6 +179,8 @@ If there are delays downstream, at some point it may make sense to go ahead and 
   - replace both `xxx`s with the credential information provided to Seth by Marco Vermeulen (marco at sdkman dot io)
   - [ ] test afterwards with `sdk list scala` and `sdk install scala <version>` (these should work immediately once the `POST` succeeds)
   - to correct mistakes, `PATCH` and `DELETE` are also available
+  - [ ] broadcast the addition via the SDKMAN twitter account
+    - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.12.14", "url": "https://github.com/scala/scala/releases/tag/v2.12.14"}' https://vendors.sdkman.io/announce/struct
 - [ ] Announce on https://reddit.com/r/scala
 - [ ] ask Seth to announce on #scala IRC
 
