@@ -100,6 +100,8 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
 
 ### When everything is on maven central
 
+**NOTE (Mar 2 2022):** at next release time, update these steps as needed to accomodate https://github.com/scala/scala-lang/pull/1344
+
 - [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
   - `download/index.md`
   - `_config.yml` (update devscalaversion or scalaversion)
