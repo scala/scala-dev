@@ -153,7 +153,7 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for kind-projector to publish
   - [ ] Wait for scoverage to publish
 - Downstream signoffs:
-  - [ ] Wait for the Scala Center to sign off (Seb)
+  - [ ] Wait for the Scala Center to sign off (Julien)
   - [ ] Wait for VirtusLab to sign off (Krzysztof)
 
 We have promised to wait **48 non-weekend hours**, minimum.
