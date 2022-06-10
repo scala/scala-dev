@@ -177,12 +177,12 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 - [ ] Add the release to SDKMAN
   - as per the documentation at https://sdkman.io/vendors
   - URL provided must be in `.zip` format, `.tgz` doesn't work
-  - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.12.14", "url": "https://downloads.lightbend.com/scala/2.12.14/scala-2.12.14.tgz"}' https://vendors.sdkman.io/release`
+  - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.13.9", "url": "https://downloads.lightbend.com/scala/2.13.9/scala-2.13.9.zip"}' https://vendors.sdkman.io/release`
   - replace both `xxx`s with the credential information provided to Seth by Marco Vermeulen (marco at sdkman dot io)
   - [ ] test afterwards with `sdk list scala` and `sdk install scala <version>` (these should work immediately once the `POST` succeeds)
   - to correct mistakes, `PATCH` and `DELETE` are also available
   - [ ] broadcast the addition via the SDKMAN twitter account
-    - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.12.14", "url": "https://github.com/scala/scala/releases/tag/v2.12.14"}' https://vendors.sdkman.io/announce/struct
+    - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.13.9", "url": "https://github.com/scala/scala/releases/tag/v2.13.9"}' https://vendors.sdkman.io/announce/struct`
 - [ ] Announce on https://reddit.com/r/scala
 - [ ] ask Seth to announce on #scala IRC
 
