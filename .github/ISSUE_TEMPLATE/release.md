@@ -154,7 +154,7 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for scoverage to publish
 - Downstream signoffs:
   - [ ] Wait for the Scala Center to sign off (Julien)
-  - [ ] Wait for VirtusLab to sign off (Krzysztof)
+  - [ ] Wait for VirtusLab to sign off (Tomasz, or Krzysztof)
 
 We have promised to wait **48 non-weekend hours**, minimum.
 
