@@ -22,7 +22,7 @@ before_install:
     unset SBT_OPTS
     unset JVM_OPTS
     unset SBT_ETC_FILE
-    curl -L --silent "https://raw.githubusercontent.com/sbt/sbt/1.5.x/sbt" > $HOME/sbt
+    curl -L --silent "https://raw.githubusercontent.com/sbt/sbt/1.6.x/sbt" > $HOME/sbt
     chmod +x $HOME/sbt && sudo mv $HOME/sbt /usr/local/bin/sbt
 
 before_cache:
