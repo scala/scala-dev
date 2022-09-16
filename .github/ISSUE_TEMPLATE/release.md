@@ -153,8 +153,8 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for kind-projector to publish
   - [ ] Wait for scoverage to publish
 - Downstream signoffs:
-  - [ ] Wait for the Scala Center to sign off (Julien)
-  - [ ] Wait for VirtusLab to sign off (Tomasz, or Krzysztof)
+  - [ ] Ask the Scala Center to sign off (Julien, or Seb)
+  - [ ] Ask VirtusLab to sign off (Tomasz, or Krzysztof)
 
 We have promised to wait **48 non-weekend hours**, minimum.
 
@@ -171,7 +171,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
       - see note above about permissions to trigger a job
 - [ ] Scala Users discourse https://users.scala-lang.org
 - [ ] Tweet from [@scala_lang](https://twitter.com/scala_lang)
-- [ ] Discord: link to release notes in #announcements channel
+- [ ] Discord: link to release notes in #links channel
     - [ ] consider also saying something in #scala-contributors channel
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
 - [ ] Add the release to SDKMAN
@@ -183,6 +183,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
   - to correct mistakes, `PATCH` and `DELETE` are also available
   - [ ] broadcast the addition via the SDKMAN twitter account
     - sample command: `curl -X POST -H "Consumer-Key: xxx" -H "Consumer-Token: xxx" -H "Content-Type: application/json" -H "Accept: application/json" -d '{"candidate": "scala", "version": "2.13.9", "url": "https://github.com/scala/scala/releases/tag/v2.13.9"}' https://vendors.sdkman.io/announce/struct`
+    - make sure it shows up at https://twitter.com/sdkman_
 - [ ] Announce on https://reddit.com/r/scala
 - [ ] ask Seth to announce on #scala IRC
 
