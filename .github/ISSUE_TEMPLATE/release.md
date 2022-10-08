@@ -62,13 +62,17 @@ Key links:
 [scala-asm]: https://github.com/scala/scala-asm/
 [ASM]: https://asm.ow2.io/versions.html
 
-### Point of no return
+### Allow time for testing
 
-Once sufficient time for community testing has passed, it's time to cut the release!
-
-What is "sufficient" time?  A week is a bare minimum. Two weeks is a better "normal" amount. We should also respect requests from Scala Center advisory board members, if they explicitly ask for additional testing time.  (In the past, we sometimes only waited a day or two, but this was overly optimistic in presuming that people had been testing nightlies all along.)
+How much time is sufficient?  A week is a bare minimum. Two weeks is a better "normal" amount. We should also respect requests from Scala Center advisory board members, if they explicitly ask for additional testing time.  (In the past, we sometimes only waited a day or two, but this was overly optimistic in presuming that people had been testing nightlies all along.)
 
 Be mindful of others' schedules; even minor releases make work downstream (for Scala.js and Scala Native, for the Scala 3 team, for compiler plugin authors, and so on). And a botched release might make unexpected work for ourselves as well as for others. So it's better not to release on a Friday or even a Thursday, or too close to a major holiday. And it's best to release while everyone in both America and Europe is awake. (First thing in the morning in America is a good choice.)
+
+### Stage! (point of soft no-return)
+
+Once sufficient time for community testing has passed, it's time to stage the release!
+
+We call this "soft" no-return because even staged artifacts can end up in local caches and cause confusion.
 
 - [ ] Make sure there are no stray [staging repos](https://oss.sonatype.org/#stagingRepositories) on Sonatype
 - [ ] Trigger a custom build on [travis](https://app.travis-ci.com/github/scala/scala)
@@ -85,7 +89,11 @@ Be mindful of others' schedules; even minor releases make work downstream (for S
   - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
   - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
 - [ ] Check that JARs haven't mysteriously bloated — compare sizes to previous release. We have no other backstop for this.
-- Remember, tags are forever, so are maven artifacts (even staged ones, as they could end up in local caches) and S3 uploads (S3 buckets can be changed, but it can takes days to become consistent)
+
+### Release! (point of hard no-return)
+
+"Hard" no-return because Maven Central is forever. Also, S3 uploads should be treated as forever (S3 buckets can be changed, but it can takes days to become consistent). Tags, too, should be treated as forever, even though they can technically be deleted and re-pushed.
+
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
 - [ ] Trigger two scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. must use full-length SHAs!
