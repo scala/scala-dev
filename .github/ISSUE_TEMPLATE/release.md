@@ -103,8 +103,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 
 ### Check availability
 
-- [ ] Check release on sonatype: https://oss.sonatype.org/content/repositories/releases/org/scala-lang/scala-compiler/$SCALA_VER/
-- [ ] Check the release on maven central: https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
+- [ ] Find the release on maven central: https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
 
 ### When everything is on maven central
 
