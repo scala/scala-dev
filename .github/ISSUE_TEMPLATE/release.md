@@ -107,15 +107,16 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 
 ### When everything is on maven central
 
-**NOTE (Mar 2 2022):** at next release time, update these steps as needed to accomodate https://github.com/scala/scala-lang/pull/1344
-
-- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag)
-  - `download/index.md`
-  - `_config.yml` (update devscalaversion or scalaversion)
-  - `index.md` (update `currentScalaVersion`)
-- [ ] Prepare PR to https://github.com/scala/docs.scala-lang/
-  - `api/all.md`, `_config.yml`, `_overviews/jdk-compatibility/overview.md`
-  - also consider updating https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html
+- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag; refer to PR from previous release as a guide)
+  - `_config.yml` (update scalaversion or devscalaversion)
+  - `_data/scala-releases.yml`
+  - new files in `_downloads` and `_posts`
+- [ ] Prepare PR to https://github.com/scala/docs.scala-lang/ (refer to PR from previous release as a guide)
+  -`_config.yml`
+  - `api/all.md`
+  - `overviews/FAQ/index.md`
+  - `contribute/bug-reporting-guide.md`
+  - perhaps `_overviews/jdk-compatibility/overview.md` (online version: https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html)
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] ~On major releases only: (manually) update the `current` symlink for the API docs~
   - ~https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15~
