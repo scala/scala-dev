@@ -150,6 +150,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - [ ] [acyclic](https://github.com/com-lihaoyi/acyclic/issues)
   - [ ] [Ammonite](https://github.com/com-lihaoyi/Ammonite/issues)
   - [ ] (Lightbend) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
+    - in addition to publishing, PR the addition of the new version to CI and add a patch file so nightlies of the next version work in the community build
 
 ### Wait for downstream
 
