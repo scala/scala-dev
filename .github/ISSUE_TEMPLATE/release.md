@@ -218,13 +218,14 @@ If there are delays downstream, at some point it may make sense to go ahead and 
   - [ ] Update scala-fortify
   - [ ] Update scala-fortify-docs
 - [ ] (Lightbend) Notify eng-updates
-- [ ] Update https://contributors.scala-lang.org thread
 - [ ] Create a scala/scala PR to:
   - [ ] update `starr.version` in `/versions.properties`
   - [ ] update `Global / baseVersion` in `/build.sbt`
   - [ ] update `mimaReferenceVersion` in `/project/MimaFilters.scala`
   - [ ] clear out `mimaFilters` in `/project/MimaFilters.scala`, except the one(s) labeled "KEEP"
   - ~`spec/_config.yml`, if it's a major release~
+- [ ] Update https://contributors.scala-lang.org thread
+- [ ] Create https://contributors.scala-lang.org thread for the next release
 
 ### You're done!
 
