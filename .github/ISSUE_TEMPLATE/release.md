@@ -59,6 +59,7 @@ Key links:
 - [ ] Check module versioning (is everything in versions.properties up to date?)
   - including make sure the version of [scala-asm][] we're using is using latest [ASM][]
 - ~On major release, bump PickleFormat version~
+- [ ] Test on Lightbend customer codebase(s), if applicable
 - [ ] Close the scala/scala and scala/bug milestones
 
 [scala-asm]: https://github.com/scala/scala-asm/
