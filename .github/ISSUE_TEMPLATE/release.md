@@ -168,8 +168,8 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for scoverage to publish
   - [ ] Wait for scala-debug-adapter to publish
 - Downstream signoffs:
-  - [ ] Ask the Scala Center to sign off (Julien, or Seb)
-  - [ ] Ask VirtusLab to sign off (Tomasz, or Krzysztof)
+  - [ ] Ask the Scala Center to sign off (Seb)
+  - [ ] Ask VirtusLab to sign off (Tomasz)
 
 We have promised to wait **48 non-weekend hours**, minimum.
 
