@@ -186,6 +186,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
       - see note above about permissions to trigger a job
 - [ ] Scala Users discourse https://users.scala-lang.org
 - [ ] Tweet from [@scala_lang](https://twitter.com/scala_lang)
+  - [ ] And ask Toli to also share the same thing from https://fosstodon.org/@scala_lang
 - [ ] Discord: link to release notes in #links channel
     - [ ] consider also saying something in #scala-contributors channel
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
