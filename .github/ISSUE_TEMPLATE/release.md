@@ -168,8 +168,8 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for scoverage to publish
   - [ ] Wait for scala-debug-adapter to publish
 - Downstream signoffs:
-  - [ ] Ask the Scala Center to sign off (Julien, or Seb)
-  - [ ] Ask VirtusLab to sign off (Tomasz, or Krzysztof)
+  - [ ] Ask the Scala Center to sign off (Seb)
+  - [ ] Ask VirtusLab to sign off (Tomasz)
 
 We have promised to wait **48 non-weekend hours**, minimum.
 
@@ -185,7 +185,9 @@ If there are delays downstream, at some point it may make sense to go ahead and 
       - see if https://scala-webapps.epfl.ch/jenkins/view/All/job/production_scala-lang.org-builder/ has run a job yet to actually publish the changes
       - see note above about permissions to trigger a job
 - [ ] Scala Users discourse https://users.scala-lang.org
-- [ ] Tweet from [@scala_lang](https://twitter.com/scala_lang)
+- [ ] Announce on Twitter from [@scala_lang](https://twitter.com/scala_lang)
+- [ ] Announce on Mastodon from [@scala_lang](https://fosstodon.org/@scala_lang)
+  - Seth has the login info for Twitter and Mastodon. Upstream contact is Toli.
 - [ ] Discord: link to release notes in #links channel
     - [ ] consider also saying something in #scala-contributors channel
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
