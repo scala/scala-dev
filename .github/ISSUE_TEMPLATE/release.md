@@ -36,7 +36,6 @@ Key links:
 
 ### Release announcement / notes
 
-- [ ] Notify community on https://contributors.scala-lang.org/c/announcements
 - [ ] Review merged PRs, make sure release-notes label is applied appropriately
 - [ ] PRs with release-notes label must have excellent title & description (title will be pasted literally in release note bullet list)
 - [ ] Draft release notes (PR and self-merge, so others can comment there rather than on the commits)
