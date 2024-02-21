@@ -82,12 +82,12 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
   - If you get "Server redirected too many  times" from Sonatype, you may need to redo the Travis-CI secrets as per https://github.com/scala/scala-dev/issues/783#issuecomment-918759252 -- this seems to reoccur from time to time for unknown reasons
-  - Check that the scala/scala job also triggered a following scala/scala-dist job: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-  - [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
-  - [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
-  - [ ] Note the repos to be promoted after tag is cut (see travis log)
-    - https://oss.sonatype.org/content/repositories/orgscala-lang-????
-    - https://oss.sonatype.org/content/repositories/orgscala-lang-????
+- [ ] Check that the scala/scala job also triggered a following scala/scala-dist job: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+- [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
+- [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
+- [ ] Note the repos to be promoted after tag is cut (see travis log)
+  - https://oss.sonatype.org/content/repositories/orgscala-lang-????
+  - https://oss.sonatype.org/content/repositories/orgscala-lang-????
 - [ ] Sanity check jar/pom
   - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
   - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
