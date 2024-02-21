@@ -104,11 +104,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
 - [ ] Promote staging repos: `st_stagingRepoPromote [scala-repo]`, `st_stagingRepoPromote [modules-repo]` (or use oss.sonatype.org web UI)
 
-### Check availability
-
-- [ ] Find the release on maven central: https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
-
-### When everything is on maven central
+### While waiting for Maven Central
 
 - [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag; refer to PR from previous release as a guide)
   - `_config.yml` (update scalaversion or devscalaversion)
@@ -120,6 +116,12 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - `overviews/FAQ/index.md`
   - `contribute/bug-reporting-guide.md`
   - perhaps `_overviews/jdk-compatibility/overview.md` (online version: https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html)
+### Find the release on Maven Central
+
+- [ ] https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
+
+### After everything is on Maven Central
+
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] ~On major releases only: (manually) update the `current` symlink for the API docs~
   - ~https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15~
