@@ -209,6 +209,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 
 ### Afterwards
 
+- [ ] sbt: if it's a 2.12.x release, open PR updating version
 - [ ] Scala 3: open PR updating version:
   - two places to update:
     - `project/Build.scala`
