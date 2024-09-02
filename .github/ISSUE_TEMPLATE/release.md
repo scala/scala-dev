@@ -231,6 +231,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
   - [ ] update `mimaReferenceVersion` in `/project/MimaFilters.scala`
   - [ ] clear out `mimaFilters` in `/project/MimaFilters.scala`, except the one(s) labeled "KEEP"
   - ~`spec/_config.yml`, if it's a major release~
+- [ ] Once that PR is merged and a new nightly has published, `./advance scala` (and PR it) in the community build
 - [ ] Update https://contributors.scala-lang.org thread
 - [ ] Create https://contributors.scala-lang.org thread for the next release
 
