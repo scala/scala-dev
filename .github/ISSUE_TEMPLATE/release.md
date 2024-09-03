@@ -169,7 +169,7 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for Metals to publish
   - [ ] Wait for kind-projector to publish
   - [ ] Wait for scoverage to publish
-  - [ ] Wait for scala-debug-adapter to publish
+  - [ ] Wait for scala-debug-adapter to publish (2.13 only)
 - Downstream signoffs:
   - [ ] Ask the Scala Center to sign off (Seb)
   - [ ] Ask VirtusLab to sign off (Tomasz)
