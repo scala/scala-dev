@@ -151,8 +151,8 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - [ ] [wartremover](https://github.com/wartremover/wartremover/issues)
   - [ ] [acyclic](https://github.com/com-lihaoyi/acyclic/issues)
   - [ ] [Ammonite](https://github.com/com-lihaoyi/Ammonite/issues)
-  - [ ] [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter) (2.13 only)
-  - [ ] [scala3-migrate](https://github.com/scalacenter/scala3-migrate)
+  - [ ] [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter)
+  - [ ] [scala3-migrate](https://github.com/scalacenter/scala3-migrate) (2.13 only)
   - [ ] [scala-cli](https://github.com/virtuslab/scala-cli)
   - [ ] (Lightbend) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
     - in addition to publishing, PR the addition of the new version to CI and add a patch file so nightlies of the next version work in the community build
@@ -169,7 +169,7 @@ Before proceeding any further, wait for the ecosystem to catch up.
   - [ ] Wait for Metals to publish
   - [ ] Wait for kind-projector to publish
   - [ ] Wait for scoverage to publish
-  - [ ] Wait for scala-debug-adapter to publish (2.13 only)
+  - [ ] Wait for scala-debug-adapter to publish
 - Downstream signoffs:
   - [ ] Ask the Scala Center to sign off (Seb)
   - [ ] Ask VirtusLab to sign off (Tomasz)
