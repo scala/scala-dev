@@ -190,7 +190,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 - [ ] Scala Users discourse https://users.scala-lang.org
 - [ ] Announce on Twitter from [@scala_lang](https://twitter.com/scala_lang)
 - [ ] Announce on Mastodon from [@scala_lang](https://fosstodon.org/@scala_lang)
-  - Seth has the login info for Twitter and Mastodon. Upstream contact is Toli.
+  - Seth has the login info for Twitter and Mastodon. Upstream contact is Adrien.
 - [ ] Discord: link to release notes in #links channel
     - [ ] consider also saying something in #scala-contributors channel
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
