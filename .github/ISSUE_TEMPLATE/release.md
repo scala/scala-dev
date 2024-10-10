@@ -154,6 +154,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - [ ] [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter)
   - [ ] [scala3-migrate](https://github.com/scalacenter/scala3-migrate) (2.13 only)
   - [ ] [scala-cli](https://github.com/virtuslab/scala-cli)
+  - [ ] [scalac-profiling](https://github.com/scalacenter/scalac-profiling)
   - [ ] (Lightbend) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
     - in addition to publishing, PR the addition of the new version to CI and add a patch file so nightlies of the next version work in the community build
 
