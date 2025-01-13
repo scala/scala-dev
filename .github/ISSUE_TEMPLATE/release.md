@@ -145,6 +145,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 - Open tickets in these repos, requesting publishing:
   - [ ] [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues)
   - [ ] [scalameta](https://github.com/scalameta/scalameta/issues)
+  - [ ] [metals](https://github.com/scalameta/metals/issues)
   - [ ] [scalafix](https://github.com/scalacenter/scalafix/issues)
   - [ ] [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues)
   - [ ] [silencer](https://github.com/ghik/silencer/issues)
