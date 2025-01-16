@@ -58,7 +58,7 @@ Key links:
 - [ ] Check module versioning (is everything in versions.properties up to date?)
   - including make sure the version of [scala-asm][] we're using is using latest [ASM][]
 - ~On major release, bump PickleFormat version~
-- [ ] Test on Lightbend customer codebase(s), if applicable
+- [ ] Test on Akka customer codebase(s), if applicable
 - [ ] Close the scala/scala and scala/bug milestones
 
 [scala-asm]: https://github.com/scala/scala-asm/
@@ -156,7 +156,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - [ ] [scala3-migrate](https://github.com/scalacenter/scala3-migrate) (2.13 only)
   - [ ] [scala-cli](https://github.com/virtuslab/scala-cli)
   - [ ] [scalac-profiling](https://github.com/scalacenter/scalac-profiling)
-  - [ ] (Lightbend) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
+  - [ ] (Akka) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
     - in addition to publishing, PR the addition of the new version to CI and add a patch file so nightlies of the next version work in the community build
 
 ### Wait for downstream
@@ -220,11 +220,11 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 - ~If it's a major release:~
   - ~Update `latestSpecVersion` in `spec/_config.yml` on the old branch, so that spec is marked as no longer current~
   - ~Ditto for the nightly build and spec links in `_data/footer.yml` and `_data/doc-nav-header.yml` on docs.scala-lang.org~
-- (Lightbend) Fortify:
+- (Akka) Fortify:
   - [ ] Publish scala-fortify-plugin
   - [ ] Update scala-fortify
   - [ ] Update scala-fortify-docs
-- [ ] (Lightbend) Notify eng-updates
+- [ ] (Akka) Notify eng-updates
 - [ ] Create a scala/scala PR to:
   - [ ] update `starr.version` in `/versions.properties`
   - [ ] update `Global / baseVersion` in `/build.sbt`
