@@ -50,7 +50,7 @@ Key links:
   - JDK 11: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk11-integrate-community-build/????
   - JDK 17: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk17-integrate-community-build/????
   - JDK 21: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk21-integrate-community-build/????
-  - JDK 23: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk23-integrate-community-build/????
+  - JDK 25: https://scala-ci.typesafe.com/job/scala-2.13.x-jdk25-integrate-community-build/????
 - [ ] Green nightly builds on GitHub Actions: https://github.com/scala/scala/runs/????????
 - [ ] Check any merged PRs accidentally assigned to the next milestone in this branch, and re-assign them to this milestone
 - [ ] Merge in any older release branch
