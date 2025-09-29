@@ -80,8 +80,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - Select the correct branch
   - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
   - Check the build status on https://github.com/scala/scala/commits/2.13.x
-  - If you get "Server redirected too many  times" from Sonatype, you may need to redo the Travis-CI secrets as per https://github.com/scala/scala-dev/issues/783#issuecomment-918759252 -- this seems to reoccur from time to time for unknown reasons
-- [ ] Check that the scala/scala job also triggered a following scala/scala-dist job: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+  - If you get a failure from Sonatype (e.g., "Server redirected too many times"), you [may need to recreate the traivis secrets for sonatype](https://github.com/scala/scala-dev/issues/783#issuecomment-918759252)
 - [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
 - [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
 - [ ] Note the repos to be promoted after tag is cut (see travis log)
@@ -98,10 +97,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
-- [ ] Trigger two scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. must use full-length SHAs!
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-- [ ] Promote staging repos: `st_stagingRepoPromote [scala-repo]`, `st_stagingRepoPromote [modules-repo]` (or use oss.sonatype.org web UI)
+- [ ] Promote staging repos on https://central.sonatype.com/publishing
 
 ### While waiting for Maven Central
 
@@ -115,9 +111,14 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - `overviews/FAQ/index.md`
   - `contribute/bug-reporting-guide.md`
   - perhaps `_overviews/jdk-compatibility/overview.md` (online version: https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html)
+
 ### Find the release on Maven Central
 
 - [ ] https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
+- [ ] Once the build is available, trigger three scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. Must use full-length SHAs!
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
 
 ### After everything is on Maven Central
 
