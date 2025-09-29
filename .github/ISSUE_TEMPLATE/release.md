@@ -75,7 +75,7 @@ Once sufficient time for community testing has passed, it's time to stage the re
 
 We call this "soft" no-return because even staged artifacts can end up in local caches and cause confusion.
 
-- [ ] Make sure there are no stray [staging repos](https://oss.sonatype.org/#stagingRepositories) on Sonatype
+- [ ] Make sure there are no stray [staging repos](https://central.sonatype.com/publishing/deployments) on Central Repository
 - [ ] Trigger a custom build on [travis](https://app.travis-ci.com/github/scala/scala)
   - Select the correct branch
   - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
