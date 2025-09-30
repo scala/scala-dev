@@ -122,15 +122,9 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 - [ ] ~On major releases only: (manually) update the `current` symlink for the API docs~
   - ~https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15~
 - [ ] Check that the API docs are published
+  - According to Fabien, there is a cron job running 3x / day (03:30, 12:20, 21:20) that syncs the files over to the web server
   - https://www.scala-lang.org/api/$SCALA_VER/ (also https://www.scala-lang.org/api/2.13.x/) should have new version
-  - if they don't show up, possible troubleshooting steps include:
-    - review the two scala-dist job logs to make sure that
-      - the first one appears to have succeeded putting files in `/home/linuxsoft/archives/scala/api` on `chara.epfl.ch`
-      - the second one appears to have succeeded in updating the symlink (from `2.1x.y` to $SCALA_VER)
-    - ssh to chara.epfl.ch and poke around to see if things are where they should be
-      - if you don't have the credential for this locally but you are able to bring jenkins-worker-publish up at `ssh jenkins-worker-publish`, then from there you can `ssh -i ~/.ssh/jenkins_lightbend_chara scalatest@chara.epfl.ch`
-    - see if https://scala-webapps.epfl.ch/jenkins/view/All/job/production_scala-lang.org-scala-dist-archive-sync/ has run a job yet to sync the changes into production
-      - if not, you can manually trigger a job. Seth has access to do that, probably others on the team do too. if we get stuck, Fabien can help
+  - if they don't show up, review the `archives` and `update-api` scala-dist job logs. ssh to chara.epfl.ch and poke around.
 
 ### Prepare downstream
 
