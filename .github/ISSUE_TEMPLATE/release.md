@@ -138,21 +138,21 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 - [ ] ~build and release scala-collection-compat and other modules (or open tickets asking that the maintainers do so)~
     - ~this work has moved to https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md~
 - [ ] if it's a 2.12.x release, publish macro paradise for the new version
-- Open tickets in these repos, requesting publishing:
-  - [ ] [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues)
-  - [ ] [scalameta](https://github.com/scalameta/scalameta/issues)
-  - [ ] [metals](https://github.com/scalameta/metals/issues)
-  - [ ] [scalafix](https://github.com/scalacenter/scalafix/issues)
-  - [ ] [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues)
-  - [ ] [silencer](https://github.com/ghik/silencer/issues)
-  - [ ] [wartremover](https://github.com/wartremover/wartremover/issues)
-  - [ ] [acyclic](https://github.com/com-lihaoyi/acyclic/issues)
-  - [ ] [Ammonite](https://github.com/com-lihaoyi/Ammonite/issues)
-  - [ ] [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter)
-  - [ ] [scala3-migrate](https://github.com/scalacenter/scala3-migrate) (2.13 only)
-  - [ ] [scala-cli](https://github.com/virtuslab/scala-cli)
-  - [ ] [scalac-profiling](https://github.com/scalacenter/scalac-profiling)
-  - [ ] (Akka) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
+- [ ] Open tickets in these repos, requesting publishing:
+  - [typelevel/kind-projector](https://github.com/typelevel/kind-projector/issues)
+  - [scalameta](https://github.com/scalameta/scalameta/issues)
+  - [metals](https://github.com/scalameta/metals/issues)
+  - [scalafix](https://github.com/scalacenter/scalafix/issues)
+  - [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues)
+  - [silencer](https://github.com/ghik/silencer/issues)
+  - [wartremover](https://github.com/wartremover/wartremover/issues)
+  - [acyclic](https://github.com/com-lihaoyi/acyclic/issues)
+  - [Ammonite](https://github.com/com-lihaoyi/Ammonite/issues)
+  - [scala-debug-adapter](https://github.com/scalacenter/scala-debug-adapter)
+  - [scala3-migrate](https://github.com/scalacenter/scala3-migrate) (2.13 only)
+  - [scala-cli](https://github.com/virtuslab/scala-cli)
+  - [scalac-profiling](https://github.com/scalacenter/scalac-profiling)
+  - (Akka) [lightbend/genjavadoc](https://github.com/lightbend/genjavadoc/issues)
     - in addition to publishing, PR the addition of the new version to CI and add a patch file so nightlies of the next version work in the community build
 
 ### Wait for downstream
