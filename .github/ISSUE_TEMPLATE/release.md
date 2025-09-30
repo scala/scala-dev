@@ -83,12 +83,8 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - If you get a failure from Sonatype (e.g., "Server redirected too many times"), you [may need to recreate the traivis secrets for sonatype](https://github.com/scala/scala-dev/issues/783#issuecomment-918759252)
 - [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
 - [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
-- [ ] Note the repos to be promoted after tag is cut (see travis log)
-  - https://oss.sonatype.org/content/repositories/orgscala-lang-????
-  - https://oss.sonatype.org/content/repositories/orgscala-lang-????
 - [ ] Sanity check jar/pom
-  - https://oss.sonatype.org/content/repositories/staging/org/scala-lang/scala-compiler/$SCALA_VER/
-  - in particular, if the release was staged multiple times, double check that https://oss.sonatype.org/content/repositories/staging/ has the files from the most recent build
+  - https://central.sonatype.com/publishing
 - [ ] Check that JARs haven't mysteriously bloated — compare sizes to previous release. We have no other backstop for this.
 
 ### Release! (point of hard no-return)
