@@ -95,9 +95,20 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
 - [ ] Promote staging repos on https://central.sonatype.com/publishing
 
-### While waiting for Maven Central
+### Find the release on Maven Central
 
-- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using scala/make-release-notes which requires a staged release and a pushed tag; refer to PR from previous release as a guide)
+- [ ] https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
+- [ ] On GitHub, use "Create release from tag" button, set the release notes to `[wip]`
+  - https://github.com/scala/scala/releases/tag/v$SCALA_VER
+  - this is required for the scala-dist jobs below to upload the artifacts
+- [ ] Once the build is available, trigger three scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. Must use full-length SHAs!
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+
+### After everything is on Maven Central and the GitHub release
+
+- [ ] Prepare PR to https://github.com/scala/scala-lang/ (using [scala/make-release-notes](https://github.com/scala/make-release-notes), which requires the release on Maven Central and on the GitHub release)
   - `_config.yml` (update scalaversion or devscalaversion)
   - `_data/scala-releases.yml`
   - new files in `_downloads` and `_posts`
@@ -107,17 +118,6 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - `overviews/FAQ/index.md`
   - `contribute/bug-reporting-guide.md`
   - perhaps `_overviews/jdk-compatibility/overview.md` (online version: https://docs.scala-lang.org/overviews/jdk-compatibility/overview.html)
-
-### Find the release on Maven Central
-
-- [ ] https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
-- [ ] Once the build is available, trigger three scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. Must use full-length SHAs!
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-
-### After everything is on Maven Central
-
 - [ ] Pre-announce the release on https://contributors.scala-lang.org/c/announcements
 - [ ] ~On major releases only: (manually) update the `current` symlink for the API docs~
   - ~https://github.com/scala/scala-dist/blob/2.13.x/scripts/jobs/release/website/update-api#L15~
@@ -178,7 +178,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 
 ### Announcements
 
-- [ ] On GitHub, use "Create release from tag" button and add release notes
+- [ ] On the GitHub release, add the release notes
   - https://github.com/scala/scala/releases/tag/v$SCALA_VER
 - [ ] Merge the scala-lang PR and the docs.scala-lang.org PR
   - [ ] wait for them to arrive on the websites and make sure they look okay
