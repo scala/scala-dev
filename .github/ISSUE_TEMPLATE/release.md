@@ -196,7 +196,6 @@ If there are delays downstream, at some point it may make sense to go ahead and 
   - [ ] test afterwards with `sdk list scala` and `sdk install scala <version>` (these should work immediately once the `POST` succeeds)
   - to correct mistakes, `PATCH` and `DELETE` are also available
 - [ ] Announce on https://reddit.com/r/scala
-- [ ] ask Seth to announce on #scala IRC
 
 ### Afterwards
 
