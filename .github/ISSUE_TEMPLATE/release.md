@@ -180,10 +180,11 @@ If there are delays downstream, at some point it may make sense to go ahead and 
       - see if https://scala-webapps.epfl.ch/jenkins/view/All/job/production_scala-lang.org-builder/ has run a job yet to actually publish the changes
       - see note above about permissions to trigger a job
 - [ ] Scala Users discourse https://users.scala-lang.org
-- [ ] Announce on X from [@scala_lang](https://x.com/scala_lang)
-- [ ] Announce on BlueSky from [@scala-lang.org](https://bsky.app/profile/scala-lang.org)
-- [ ] Announce on Mastodon from [@scala_lang](https://fosstodon.org/@scala_lang)
-  - Seth has the login info for X and BlueSky and Mastodon. Upstream contact is Adrien.
+- [ ] Use Typefully to announce on these three platforms together:
+  - X: [@scala_lang](https://x.com/scala_lang)
+  - Bluesky: [@scala-lang.org](https://bsky.app/profile/scala-lang.org)
+  - Mastodon: [@scala_lang](https://fosstodon.org/@scala_lang)
+  - If you have any trouble, open an issue on https://github.com/scala/scala-social-media
 - [ ] Discord: link to release notes in #links channel
     - [ ] consider also saying something in #scala-contributors channel
 - [ ] Unblock the release in Scala Steward by PRing an update to [default.scala-steward.conf](https://github.com/scala-steward-org/scala-steward/blob/master/modules/core/src/main/resources/default.scala-steward.conf)
