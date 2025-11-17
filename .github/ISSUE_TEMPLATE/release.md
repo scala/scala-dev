@@ -88,7 +88,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 
 ### Release! (point of hard no-return)
 
-"Hard" no-return because Maven Central is forever. Also, S3 uploads should be treated as forever (S3 buckets can be changed, but it can takes days to become consistent). Tags, too, should be treated as forever, even though they can technically be deleted and re-pushed.
+"Hard" no-return because Maven Central is forever. Tags, too, should be treated as forever, even though they can technically be deleted and re-pushed.
 
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
