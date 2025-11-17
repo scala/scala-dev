@@ -101,7 +101,10 @@ We call this "soft" no-return because even staged artifacts can end up in local 
   - https://github.com/scala/scala/releases/tag/v$SCALA_VER
   - this is required for the scala-dist jobs below to upload the artifacts
 - [ ] Once the build is available, trigger three scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. Must use full-length SHAs!
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`
+    - scala-dist job: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+    - downstream appveyor job: see https://ci.appveyor.com/project/scala/scala-dist/history
+    - downstream scala-dist-smoketest job: see https://app.travis-ci.com/github/scala/scala-dist-smoketest/builds
   - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
   - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
 
