@@ -92,7 +92,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 
 - [ ] Push scala/scala tag: `git push https://github.com/scala/scala.git v$SCALA_VER`
 - [ ] Push scala/scala-dist tag: `git push https://github.com/scala/scala-dist.git v$SCALA_VER`
-- [ ] Promote staging repos on https://central.sonatype.com/publishing
+- [ ] Publish the deployment on https://central.sonatype.com/publishing
 
 ### Find the release on Maven Central
 
