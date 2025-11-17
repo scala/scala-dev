@@ -97,7 +97,7 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 ### Find the release on Maven Central
 
 - [ ] https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/$SCALA_VER/
-- [ ] On GitHub, use "Create release from tag" button, set the release notes to `[wip]`
+- [ ] On GitHub, use "Create release from tag" button. Set the title to `[WIP] Scala $SCALA_VER]` and the release notes to `Work in progress: this release is not yet announced. See https://contributors.scala-lang.org/t/?.`
   - https://github.com/scala/scala/releases/tag/v$SCALA_VER
   - this is required for the scala-dist jobs below to upload the artifacts
 - [ ] Once the build is available, trigger three scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. Must use full-length SHAs!
