@@ -203,7 +203,7 @@ If there are delays downstream, at some point it may make sense to go ahead and 
 ### Afterwards
 
 - [ ] sbt: if it's a 2.12.x release, open PR updating version
-- [ ] Scala 3: open issue suggesting that the Scala 3 stdlib merge our changes to the stdlib sources and tag `@scala/stdlib-officers`
+- [ ] Scala 3: open issue suggesting that the Scala 3 stdlib cherry-pick our changes to the stdlib sources; tag `@scala/stdlib-officers`
 - [ ] Scastie: open PR adding new version (modeled on https://github.com/scalacenter/scastie/pull/538)
   - note that the PR won't be mergeable until kind-projector has published; and if kind-projector's version number has changed, `ScalaTarget.scala` will need updating
 - ~If it's a major release:~
