@@ -22,14 +22,13 @@ before_install:
     unset SBT_OPTS
     unset JVM_OPTS
     unset SBT_ETC_FILE
-    curl -L --silent "https://raw.githubusercontent.com/sbt/sbt/1.6.x/sbt" > $HOME/sbt
+    curl -L --silent "https://raw.githubusercontent.com/sbt/sbt/refs/tags/v1.12.5/sbt" > $HOME/sbt
     chmod +x $HOME/sbt && sudo mv $HOME/sbt /usr/local/bin/sbt
 
 before_cache:
   - rm -fv $HOME/.ivy2/.sbt.ivy.lock
   - rm -fv $HOME/.sdkman/var/broadcast
   - rm -fv $HOME/.sdkman/var/broadcast_id
-  - rm -rfv $HOME/.sbt/1.0/.develocity
   - find $HOME/.ivy2/cache -name "ivydata-*.properties"     -print -delete
   - find $HOME/.sbt        -name "*.lock"                   -print -delete
   - find $HOME/.sbt        -name "*compiler-bridge_*-bin-*" -print -delete
