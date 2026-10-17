@@ -75,11 +75,11 @@ Once sufficient time for community testing has passed, it's time to stage the re
 
 We call this "soft" no-return because even staged artifacts can end up in local caches and cause confusion.
 
-- [ ] Trigger a custom build on [travis](https://app.travis-ci.com/github/scala/scala)
+- [ ] Run the [Publish workflow](https://github.com/scala/scala/actions/workflows/publish.yml) ("Run workflow")
   - Select the correct branch
-  - Custom config: `before_script: export SCALA_VER_BASE=$SCALA_VER_BASE SCALA_VER_SUFFIX=$SCALA_VER_SUFFIX`
-  - Check the build status on https://github.com/scala/scala/commits/2.13.x
-  - If you get a failure from Sonatype (e.g., "Server redirected too many times"), you [may need to recreate the traivis secrets for sonatype](https://github.com/scala/scala-dev/issues/783#issuecomment-918759252)
+  - Set `SCALA_VER_BASE` to `$SCALA_VER_BASE` and `SCALA_VER_SUFFIX` to `$SCALA_VER_SUFFIX`
+  - Publish run: https://github.com/scala/scala/actions/runs/?
+  - If you get a failure from Sonatype, check the `SONATYPE_USERNAME` / `SONATYPE_PASSWORD` secrets of scala/scala
 - [ ] Create the scala/scala tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $SCALA_SHA`
 - [ ] Create scala-dist tag locally: `git tag -s -m "Scala $SCALA_VER" v$SCALA_VER $DIST_SHA`
 - [ ] Sanity check jar/pom
@@ -100,14 +100,12 @@ We call this "soft" no-return because even staged artifacts can end up in local 
 - [ ] On GitHub, use "Create release from tag" button. Set the title to `[WIP] Scala $SCALA_VER]` and the release notes to `Work in progress: this release is not yet announced. See https://contributors.scala-lang.org/t/?.`
   - https://github.com/scala/scala/releases/tag/v$SCALA_VER
   - this is required for the scala-dist jobs below to upload the artifacts
-- [ ] Once the build is available, trigger three scala-dist jobs on travis (https://app.travis-ci.com/github/scala/scala-dist) with custom config. Must use full-length SHAs!
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=release`
-    - scala-dist job: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-    - Downstream appveyor job: see https://ci.appveyor.com/project/scala/scala-dist/history
-    - Downstream scala-dist-smoketest job: see https://app.travis-ci.com/github/scala/scala-dist-smoketest/builds
-    - Once finished, check the artifacts at https://github.com/scala/scala/releases/tag/v$SCALA_VER. Rename the `.deb` file to `scala-SCALA_VER.deb` (https://github.com/scala/scala-dev/issues/921).
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=archives`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
-  - `before_script: export version=$SCALA_VER scala_sha=$SCALA_SHA mode=update-api`: https://app.travis-ci.com/github/scala/scala-dist/builds/?
+- [ ] Once the build is available, run the [scala-dist Distribution workflow](https://github.com/scala/scala-dist/actions/workflows/dist.yml) three times ("Run workflow", on the release's branch), with `version` = `$SCALA_VER`, `scala_sha` = `$SCALA_SHA` (must be the full-length SHA!) and these modes:
+  - `release`: https://github.com/scala/scala-dist/actions/runs/?
+    - builds the Linux and Windows packages, uploads them to the GitHub release, then runs the smoketest
+    - Once finished, check the artifacts at https://github.com/scala/scala/releases/tag/v$SCALA_VER
+  - `archives`: https://github.com/scala/scala-dist/actions/runs/?
+  - `update-api`: https://github.com/scala/scala-dist/actions/runs/?
 
 ### After everything is on Maven Central and the GitHub release
 
